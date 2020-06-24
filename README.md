@@ -17,3 +17,12 @@ With the above packages installed and added to your `PATH`, simply run `make`
 to compile this document.  The output is a PDF file named
 `software-testing-laboon-ebook.pdf`.
 
+---
+
+```
+git clone https://github.com/evaristor/ebook
+cd ebook
+docker build --tag software-testing-laboon-ebook .
+docker run --volume ${PWD}:/workdir software-testing-laboon-ebook make
+xdg-open software-testing-laboon-ebook.pdf
+```
