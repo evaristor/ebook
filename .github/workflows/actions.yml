@@ -1,0 +1,13 @@
+name: Compile ebook
+on: [push, pull_request]
+
+jobs:
+  actions:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Build image
+      run: docker build --tag software-testing-laboon-ebook .
+    - name: Compile ebook
+      run: docker run software-testing-laboon-ebook make
