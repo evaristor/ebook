@@ -20,8 +20,8 @@ to compile this document.  The output is a PDF file named
 ---
 
 ```
-git clone https://github.com/evaristor/ebook
-cd ebook
+git clone https://github.com/evaristor/software-testing-laboon-ebook
+cd software-testing-laboon-ebook
 docker build --tag software-testing-laboon-ebook .
 docker run --volume ${PWD}:/workdir software-testing-laboon-ebook make
 xdg-open software-testing-laboon-ebook.pdf
